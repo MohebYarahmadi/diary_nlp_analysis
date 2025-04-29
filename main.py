@@ -9,8 +9,8 @@ pos_scores = []
 neg_scores = []
 
 st.set_page_config(page_title='Diary Tone')
-st.title('Diary Analysis using NLP')
-st.subheader('Diary Tone')
+st.title('Diary Tone')
+st.subheader('NLP Analysis')
 
 for filepath in filepaths:
     diary = functions.read_files(filepath)
@@ -20,9 +20,9 @@ for filepath in filepaths:
 
 
 st.subheader("Positivity")
-pos_figure = px.line(x=dates, y=pos_scores, labels={'x': 'Dates', 'y': 'Positivity'})
+pos_figure = px.line(x=dates, y=pos_scores, labels={'x': 'Date', 'y': 'Positivity'})
 st.plotly_chart(pos_figure)
 
 st.subheader("Negativity")
-neg_figure = px.line(x=dates, y=neg_scores, labels={'x': 'Dates', 'y': 'Negativity'})
+neg_figure = px.line(x=dates, y=neg_scores, labels={'x': 'Date', 'y': 'Negativity'})
 st.plotly_chart(neg_figure)
