@@ -3,7 +3,7 @@ import plotly.express as px
 import glob
 import functions
 
-filepaths = glob.glob("data/*.txt")
+filepaths = sorted(glob.glob("data/*.txt"))
 dates = functions.get_dates(filepaths)
 pos_scores = []
 neg_scores = []

@@ -15,5 +15,4 @@ def sentiment_analyzer(data):
 
 def get_dates(filepath):
     dates = [Path(f).stem for f in filepath]
-    dates.sort()
     return dates
